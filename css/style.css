@@ -1,0 +1,294 @@
+/* VELORA - Project 1 */
+
+/* Design System */
+:root {
+    --primary: #111827;
+    --secondary: #f3f4f6;
+    --accent: #8b7e74;
+    --white: #ffffff;
+    --border: #d1d5db;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.site-header nav a {
+    font-size: 0.9rem;
+}
+
+/* Shared Text Styles */
+.category {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+/* Page 1 - Hero */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 6%;
+}
+
+.hero-feature {
+    background-color: var(--secondary);
+}
+
+.hero-feature img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.hero-content {
+    padding: 30px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 20px;
+    margin-top: 5px;
+}
+
+.button:hover {
+    background-color: var(--accent);
+}
+
+.hero-info {
+    background-color: var(--secondary);
+    padding: 30px;
+}
+
+.hero-info > p {
+    margin-bottom: 20px;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.quick-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Latest Stories */
+.latest-stories {
+    padding: 40px 6% 70px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.cards-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+}
+
+.card img {
+    height: 320px;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px;
+}
+
+.card-content > p:not(.category) {
+    margin-bottom: 20px;
+}
+
+.card-link {
+    margin-top: auto;
+    font-weight: bold;
+    border-bottom: 1px solid var(--primary);
+    width: fit-content;
+}
+
+/* Page 2 - Detail Hero */
+.detail-layout {
+    padding: 0 6%;
+}
+
+.detail-hero {
+    padding: 60px 0 40px;
+    max-width: 800px;
+}
+
+.lead {
+    font-size: 1.15rem;
+    color: var(--accent);
+}
+
+/* Page 2 - Content */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 70px;
+}
+
+.detail-image {
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 35px;
+}
+
+.article-content h2 {
+    margin-top: 30px;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+.key-takeaways {
+    background-color: var(--secondary);
+    padding: 25px;
+    margin-top: 35px;
+}
+
+.key-takeaways h2 {
+    margin-top: 0;
+}
+
+.key-takeaways ul {
+    padding-left: 20px;
+}
+
+.key-takeaways li {
+    margin-bottom: 10px;
+}
+
+/* Metadata */
+.metadata {
+    background-color: var(--secondary);
+    padding: 25px;
+    height: fit-content;
+}
+
+.metadata-item {
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+}
+
+.metadata-label {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 30px 6%;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .site-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
